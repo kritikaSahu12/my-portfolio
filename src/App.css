@@ -1,0 +1,405 @@
+
+/* ===== Global Styles ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #100b1d;
+  color: #ffffff;
+}
+
+.portfolio {
+  width: 100%;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* ===== Navbar ===== */
+.navbar {
+  width: 100%;
+  min-height: 80px;
+  padding: 20px 7%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  background-color: #19112b;
+  border-bottom: 1px solid #35254b;
+}
+
+.logo {
+  color: #c084fc;
+  font-size: 26px;
+  white-space: nowrap;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+  flex-wrap: wrap;
+}
+
+.nav-links a {
+  color: #eeeeee;
+  font-size: 15px;
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: #c084fc;
+}
+
+/* ===== Home / Hero Section ===== */
+.hero {
+  min-height: 520px;
+  padding: 65px 8%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 45px;
+}
+
+.hero-content {
+  flex: 1;
+  max-width: 600px;
+}
+
+.intro {
+  color: #c084fc;
+  font-size: 20px;
+  margin-bottom: 12px;
+}
+
+.hero-content h1 {
+  font-size: clamp(36px, 5vw, 55px);
+  margin-bottom: 12px;
+  line-height: 1.2;
+}
+
+.hero-content h2 {
+  font-size: 27px;
+  color: #c084fc;
+  margin-bottom: 20px;
+}
+
+.hero-content p:not(.intro) {
+  color: #c9c3d3;
+  font-size: 16px;
+  line-height: 1.8;
+  max-width: 500px;
+}
+
+/* ===== Profile Photo ===== */
+.hero-image {
+  flex: 0 0 280px;
+  width: 280px;
+  height: 280px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-image img {
+  width: 280px;
+  height: 280px;
+  max-width: 100%;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 50%;
+  border: 4px solid #c084fc;
+  box-shadow: 0 0 25px rgba(192, 132, 252, 0.25);
+  display: block;
+}
+
+/* ===== Buttons ===== */
+.hero-buttons,
+.contact-buttons {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  flex-wrap: wrap;
+  margin-top: 28px;
+}
+
+.btn {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  padding: 12px 22px;
+  min-height: 44px;
+  background-color: #a855f7;
+  color: #ffffff;
+  border: 2px solid #a855f7;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #9333ea;
+  border-color: #9333ea;
+  transform: translateY(-2px);
+}
+
+.btn-outline {
+  background-color: transparent;
+  color: #c084fc;
+  border-color: #c084fc;
+}
+
+.btn-outline:hover {
+  background-color: #a855f7;
+  color: #ffffff;
+}
+
+/* ===== Common Sections ===== */
+.section {
+  padding: 65px 8%;
+  text-align: center;
+}
+
+.section-title {
+  font-size: 32px;
+  color: #c084fc;
+  margin-bottom: 30px;
+}
+
+/* ===== About Section ===== */
+.about-text {
+  max-width: 800px;
+  margin: 0 auto;
+  color: #d0cad9;
+  font-size: 16px;
+  line-height: 1.9;
+}
+
+/* ===== Skills Section ===== */
+.skills-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 18px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.skill-card {
+  min-width: 130px;
+  padding: 16px 22px;
+  background-color: #211633;
+  border: 1px solid #51336e;
+  border-radius: 10px;
+  color: #ffffff;
+  transition: all 0.3s ease;
+}
+
+.skill-card:hover {
+  background-color: #35204d;
+  border-color: #c084fc;
+  transform: translateY(-4px);
+}
+
+/* ===== Projects Section ===== */
+.projects-container {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 22px;
+}
+
+.project-card {
+  padding: 25px;
+  min-width: 0;
+  text-align: left;
+  background-color: #211633;
+  border: 1px solid #51336e;
+  border-radius: 12px;
+  transition: all 0.3s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+  border-color: #c084fc;
+}
+
+.project-card h3 {
+  color: #c084fc;
+  font-size: 20px;
+  margin-bottom: 15px;
+}
+
+.project-card p {
+  color: #d0cad9;
+  font-size: 15px;
+  line-height: 1.7;
+}
+
+/* ===== Contact Section ===== */
+.contact-section p {
+  color: #d0cad9;
+  line-height: 1.8;
+}
+
+.contact-buttons {
+  justify-content: center;
+}
+
+/* ===== Footer ===== */
+.footer {
+  padding: 25px 15px;
+  text-align: center;
+  background-color: #19112b;
+  border-top: 1px solid #35254b;
+}
+
+.footer p {
+  color: #c9c3d3;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+/* ===== Tablet Responsive ===== */
+@media (max-width: 900px) {
+  .navbar {
+    padding: 20px 5%;
+  }
+
+  .nav-links {
+    gap: 15px;
+  }
+
+  .hero {
+    padding: 55px 6%;
+    gap: 30px;
+  }
+
+  .hero-image {
+    flex-basis: 230px;
+    width: 230px;
+    height: 230px;
+  }
+
+  .hero-image img {
+    width: 230px;
+    height: 230px;
+  }
+
+  .projects-container {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+/* ===== Mobile Responsive ===== */
+@media (max-width: 600px) {
+  .navbar {
+    flex-direction: column;
+    gap: 18px;
+    padding: 20px 15px;
+  }
+
+  .logo {
+    font-size: 24px;
+  }
+
+  .nav-links {
+    justify-content: center;
+    gap: 14px;
+  }
+
+  .nav-links a {
+    font-size: 13px;
+  }
+
+  .hero {
+    min-height: auto;
+    padding: 45px 22px;
+    flex-direction: column-reverse;
+    text-align: center;
+    gap: 30px;
+  }
+
+  .hero-content {
+    width: 100%;
+  }
+
+  .hero-content h1 {
+    font-size: 36px;
+  }
+
+  .hero-content h2 {
+    font-size: 23px;
+  }
+
+  .hero-content p:not(.intro) {
+    font-size: 15px;
+  }
+
+  .hero-image {
+    flex: 0 0 210px;
+    width: 210px;
+    height: 210px;
+  }
+
+  .hero-image img {
+    width: 210px;
+    height: 210px;
+  }
+
+  .hero-buttons {
+    justify-content: center;
+  }
+
+  .section {
+    padding: 50px 22px;
+  }
+
+  .section-title {
+    font-size: 28px;
+  }
+
+  .projects-container {
+    grid-template-columns: 1fr;
+  }
+
+  .project-card {
+    text-align: center;
+  }
+
+  .contact-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .contact-buttons .btn {
+    width: 100%;
+    max-width: 250px;
+  }
+}
+
+.project-button {
+  margin-top: 20px;
+  display: inline-flex;
+}
+
+.project-card {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+}
+
+.project-card p {
+  margin-bottom: 10px;
+}
